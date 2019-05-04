@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jairo Duarte</title>
+
+    <meta name="description" content="Jairo Duarte CV">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+   <!-- <link rel="icon" type="img/png" href="img/favicon.png"> -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon.ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <div id="language-select">
+      <div class="container">
+        <a
+          v-for="(lang, code) in languages"
+          v-if="code != currentLanguage"
+          v-bind:href="'#' + code"
+          v-on:click.prevent="setLanguage(code)"
+        >
+          {{ lang.label }}
+        </a>
+      </div>
+    </div>
+    <div id="wrapper" class="container">
+      <header class="row">
+        <div class="profile-picture">
+          <img :src="picture" alt="Profile picture" />
+        </div>
+        <div class="title">
+          <h1>
+            <span class="first-name">{{ firstName }}</span>
+            <span class="last-name">{{ lastName }}</span>
+          </h1>
+          <h2>{{ title }}</h2>
+        </div>
+        <div class="col-sm-4 info">
+          <div class="info-wrapper">
+            <div class="info-item" :class="item.type" v-for="item in info">
+              <template v-if="item.link">
+                <a :href="item.link">{{ item.value }}</a>
+              </template>
+              <template v-else>
+                {{ item.value }}
+              </template>
+            </div>
+          </div>
+        </div>
+      </header>
+      <article class="row">
+        <div class="sections-left col-sm-4">
+          <component
+            v-for="(section, index) in sections"
+            v-if="!section.right"
+            v-bind:key="'section-left-' + index"
+            v-bind:section="section"
+            v-bind:is="section.template || 'resume-section'"
+          ></component>
+        </div>
+        <div class="sections-right col-sm-8">
+          <component
+            v-for="(section, index) in sections"
+            v-if="section.right"
+            v-bind:key="'section-right-' + index"
+            v-bind:section="section"
+            v-bind:is="section.template || 'resume-section'"
+          ></component>
+        </div>
+      </article>
+    </div>
+
+    <template type="text/x-template" id="resume-section">
+      <section>
+        <h3>{{ section.title }}</h3>
+        <p class="section-description" v-if="section.description">{{ section.description }}</p>
+        <ul class="section-items" v-else>
+          <li class="section-item" v-for="item in section.items">
+            <h4><span class="item-prefix" v-if="item.prefix">{{ item.prefix }}</span> {{ item.title }}</h4>
+            <p class="item-description" v-if="item.description">{{ item.description }}</p>
+            <ul class="item-subitems" v-if="item.items">
+              <li v-for="subItem in item.items">{{ subItem }}</li>
+            </ul>
+            <p class="notes" v-if="item.notes">{{ item.notes }}</p>
+          </li>
+        </ul>
+      </section>
+    </template>
+
+    <template type="text/x-template" id="hobbies-section">
+      <section class="hobbies">
+        <h3>{{ section.title }}</h3>
+        <ul class="section-items">
+          <li v-for="(item, className) in section.items" :class="className">
+            {{ item }}
+          </li>
+          <li class="dummy"></li>
+        </ul>
+      </section>
+    </template>
+
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
