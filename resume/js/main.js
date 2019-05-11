@@ -1,11 +1,11 @@
-window.__sduarte__ = window.__sduarte__ || (function() {
+window.__duarte__ = window.__duarte__ || (function() {
     var resumeDataEn = {
         picture: 'img/handsomedude2.jpg',
         lastName: 'Duarte',
         firstName: 'Alfredo Jairo',
-        title: 'Master Degree Student |  Software Engineer ',
+        title: 'MSc Student |  Software Engineer | Data Engineer ',
         info: [
-            { type: 'address', value: 'Sidi Marouf, Casablanca 20270, Morocco' },
+            { type: 'address', value: 'Rabat 10000, Morocco' },
             { type: 'email', value: 'duartealfredoj@gmail.com' },
             { type: 'tel', value: '(+212) 6 22 33 38 20', link: 'tel:+212622333820' },
             { type: 'github', value: 'github.com/jairoduarte', link: 'http://github.com/jairoduarte' },
@@ -14,113 +14,52 @@ window.__sduarte__ = window.__sduarte__ || (function() {
         ],
         sections: [
             {
-                title: 'Education',
-                items: [
-                    {
-                        prefix: 'Currently',
-                        title: 'Faculté des Sciences Ibn Tofaïl (Kènitra) ',
-                        description: 'Master\'s degree  in Big data and Cloud Computing'
-                    },
-                    {
-                        prefix: 2017,
-                        title: 'École Supérieure de Technologie Casablanca (ESTC)',
-                        description: 'Professional Licence in Software Engineering and Advanced Network and System' +
-                            ' Administration'
-                    }, {
-                        prefix: 2016,
-                        title: 'École Supérieure de Technologie Fès (ESTF)',
-                        description: 'Bachelor Degree in Computer Science'
-                    }, {
-                        prefix: 2012,
-                        title: 'Instituto Médio Industrial de Luanda ,Luanda - Angola',
-                        description: 'Baccalaureat in Systems Computer Mangement',
-                    }
-                ]
-            },
-            {
-                title: 'Skills',
-                right: true,
-                items: [
-                    {
-                        title: 'Procedural Programming',
-                        description: 'C, VisualBasic, PL/SQL...'
-                    },
-                    {
-                        title: 'Advanced Object Oriented Programming',
-                        description: 'C#, Java, JavaScript, Python...'
-                    }, 
-                    {
-                        title: 'Intermediate Mastery of database Management Systems',
-                        description: 'MySQL,PostgresSQL,Oracle 11g, Microsoft® SQL Server, NoSQL...'
-                    }, 
-                    {
-                        title: 'Development of Desktop Applications with Graphical Interfaces',
-                        description: 'Qt5, .NET Winforms, Swing...'
-                    },
-                    {
-                        title: 'Development Mobile',
-                        description: 'Java Android, Windows Phone ...'
-                    }, 
-                    {
-                        title: 'Full-Stack Web Development',
-                        description: 'ASP.NET MVC, Django, J2EE, Vuejs, NODE.js and others...'
-                    }, 
-                    {
-                        title: 'Version Control System Tools',
-                        description: 'GitHub, Microsoft TeamFoundation, Bitbucket ...'
-                    },
-                    {
-                        title: 'At ease with Command-line Tools',
-                        description: 'Git,Docker, SSH, Task runners...'
-                    },
-                    {
-                        title: 'Business Intelligence and Big Data',
-                        description: 'SSIS, SSAS, Talend Studion, Pentaho Integration, Sap Business Objet, R...'
-                    }, 
-                    {
-                        title: 'Agile Development',
-                        description: 'XP, SCRUM, Kanban...'
-                    }
-                ]
-            },
-           /* {
-                title: 'Certifications',
-                items: [
-                    {
-                        prefix: 2016,
-                        title: 'Microsoft® Specialist: Programming in HTML5 with JavaScript and CSS3'
-                    }, {
-                        prefix: 2016,
-                        title: 'Microsoft® Specialist: Programming in C#'
-                    }, {
-                        prefix: 2015,
-                        title: 'Microsoft® Certified Professional'
-                    }
-                ]
-            },*/
-            {
                 title: 'Experience',
                 right: true,
                 items: [
                     {
-                        prefix: 2017,
-                        title: 'End-of-course Intership at CGI Morocco (Sidi Marouf, Casablanca)',
+                        prefix: 'Currently',
+                        title: 'Software Engineer at UNITED REMOTE (RABAT, MOROCCO)',
                         items: [
-                            'Software Maintenance Engineer ...(PacBase, Cobol) ',
+                            'Work on several products using the JavaScript stack',
+                            'Work on several products oriented data using python and big data technologies',
+                            "Setup staging CI using Docker, Circle-CI, K8s."
+                        ]
+                    },
+                    {
+                        prefix: 2019,
+                        title: 'Data analysis from moocs platform at UIT - FS (KÈNITRA, MOROCCO',
+                        items: [
+                            'Analysis data and course from moocs site (like Udemy, Coursera, Udacity, etc...) and their social network page like (facebook and twitter)',
+                            'For to make the project it was needed:',
+                            'Build a big data pipeline with Lambda Architecture',
+                            'collect or scraping data, get data from api, clean and store data in data lake.',
+                            'Analysis data with Machine Leaning in spark cluster',
+                            'Working with technologies like PYTHON, SPARK, AMAZON S3, NLP, ML, AVRO, MONGODB, KAFKA, METABASE, GCP, SELENIUM and outhers',
+                        ]
+                    },
+                    {
+                        prefix: 2018,
+                        title: 'Building a smart telecom assistant bot at UIT - FS (KÈNITRA, MOROCCO',
+                        items: [
+                            'Build a chatbot for allowing custumers to report and solve technical issues, update their account information, get the latest offers, and outhers ...',
+                            'Working with technologies like PYTHON, NLP, MONGODB, FLASK, GOOGLE CLOUD SPEECH, and outhers',
+                        ]
+                    },
+                    {
+                        prefix: 2018,
+                        title: 'Building a pipelite for sentiment data analysis and visualisation at UIT - FS (KÈNITRA, MOROCCO',
+                        items: [
+                            'Build a pipeline for social network (twitter, facebook) data analysis and visualisation in real time',
+                            'Working with technologies like PYTHON, HADOOP (HORTONWORKS), SPARK, KAFKA, NLP, MACHINE LEARNING, MONGODB, METABASE, GCP and outhers',
                         ]
                     },
                     {
                         prefix: 2017,
-                        title: 'End-of-course Intership at CGI Morocco (Sidi Marouf, Casablanca)',
+                        title: 'Software Engineer Intership at CGI Morocco (CASABLANCA, MOROCCO)',
                         items: [
-                            'Job scheduling software for Carrefour Project using J2EE and JPA technologies...',
-                        ]
-                    },
-                    {
-                        prefix: 2017,
-                        title: 'School project: A website to manage applications for the Professional Licence at the ESTC',
-                        items: [
-                            'Using Django (and Python) to build a full-fledged web application with user management and administration panel..',
+                            'Work on software Maintenance ...(PacBase, Cobol) ',
+                            'Work on in-hause Job scheduling app for Carrefour Project using J2EE and JPA technologies...',
                         ]
                     },
                     {
@@ -128,52 +67,121 @@ window.__sduarte__ = window.__sduarte__ || (function() {
                         title: 'Personal project: Software of News (Java, JavaScript)',
                         items: [
                             'Working with Node.js, FireBase, Android Studio, Microsoft Azure, JSON and others...',
-                            'The NOde.js Backend search the news in the portals of news our blog, and stores in firebase,the android application recovers the news in JSON format...',
+                            'The NOde.js Backend API search the news in the portals of news our blog, and stores in firebase,the android application recovers the news and show to user...',
                         ]
                     },
                     {
                         prefix: 2016,
-                        title: 'End-of-course Intership at C.H.U Hassan II (Narjiss, Fès)',
+                        title: 'Software developer Intership at C.H.U Hassan II (FÈS, MOROCCO)',
                         items: [
                             'Development software for intervention management using ASPNET MVC4...',
-                            'Working with technologies like TFS,EntityFramework, ASPNET Identity and Git among others...',
+                            'Working with technologies like TFS, EntityFramework, ASPNET Identity and Git among others...',
                         ]
                     },
                     {
                         prefix: 2016,
-                        title: 'School end project : Developing OAI-PMH Repository with NODE.js at ESTF',
+                        title: 'School end project: Developing OAI-PMH Repository with NODE.js at ESTF  (FÈS, MOROCCO)',
                         items: [
                             'The Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH) provides an application-independent interoperability framework based on metadata harvestin...',
                             'A repository is a network accessible server that can process the 6 OAI-PMH requests in the manner described in this document. A repository is managed by a data provider to expose metadata to harvesters...',
                         ]
-                    },
-                    {
-                        prefix: 2016,
-                        title: 'School project: Development software for Transport Company at ESTF',
-                        items: [
-                            'Working with techonologies like ASPNET MVC 4, SQLServer, EntityFramework and others...',
-                            'More Efficient Receiving and Delivery Process of Package...',
-                        ]
                     }, 
                     {
                         prefix: 2015,
-                        title: 'Begin-of-course Intership at CompetenceCenter (Centre ville, Fès)',
+                        title: 'Intership at CompetenceCenter  (FÈS, MOROCCO)',
                         items: [
                             'Development site web with Joomla (PHP , MySQL)',
                         ]
                     },
                     {
                         prefix: 2012,
-                        title: 'School end project : Developing School Management Software at IMIL',
+                        title: 'High School end project at IMIL (LUANDA, ANGOLA)',
                         items: [
+                            'Developing School Management Software, for  management of students, teachers, grades and schedules...',
                             'Working with technologies like Visual Basic, MySQl and others...',
-                            'Management of students, teachers, grades and schedules...',
                         ]
                     }
                 ]
             },
             {
+                title: 'Education',
+                items: [
+                    {
+                        prefix: 'Currently',
+                        title: 'University Ibn Tofaïl - FS (KÈNITRA, MOROCCO)',
+                        description: 'Master\'s degree  in Big data and Cloud Computing'
+                    },
+                    {
+                        prefix: 2017,
+                        title: 'University Hassan 2 - EST (CASABLANCA, MOROCCO)',
+                        description: 'Bachelor\'s Degree in Software Engineering and System Administration'
+                    }, {
+                        prefix: 2016,
+                        title: 'Univesity Sidi Mohamed Ben Abdellah - ESTF (FÈS, MOROCCO)',
+                        description: 'Associate\'s Degree in Computer Science'
+                    }, {
+                        prefix: 2012,
+                        title: 'IMIL , (LUANDA, ANGOLA)',
+                        description: 'High School in Systems Computer Mangement',
+                    }
+                ]
+            },
+            {
+                title: 'Certifications',
+                items: [
+                    {
+                        prefix: 2018,
+                        title: 'IBM Big Data University: Hadoop 101',
+                        link: 'https://courses.cognitiveclass.ai/certificates/f5967615c18e4223bbb21d4f70b31c7b'
+                    }, {
+                        prefix: 2018,
+                        title: 'IBM Big Data University: Big Data 101',
+                        link: 'https://courses.cognitiveclass.ai/certificates/b82b724d6e1c46edbbbdab1bbea3b3f7'
+                    }
+                ]
+            },
+            {
+                title: 'Skills',
+                items: [
+                    {
+                        title: 'Programming Languages',
+                        description: 'JavaScript, Python, C#, Java, C'
+                    },
+                    {
+                        title: 'Full Stack Web Development',
+                        description: 'NODEJS, REACTJS, DJANGO, ASP.NET CORE, VUEJS, REST, GRAPHQL, SOCKET.IO, JEST, PYTEST'
+                    },
+                    {
+                        title: 'Database Management Systems',
+                        description: 'MySQL, PostgresSQL, MongoDB, REDIS'
+                    },
+                    {
+                        title: 'Business Intelligence and Big Data',
+                        description: 'APACHE HADOOP, APACHE SPARK, SQOOP, SSIS, KAFKA, CLOUDERA, NIFI, Talend Studion.'
+                    },
+                    {
+                        title: 'Machine Learning',
+                        description: 'DECISION TREES, K MEANS, REGRESSION, NAIVE DE BAYES'
+                    },
+                    {
+                        title: 'Devops | CI/CD | Command line Tools',
+                        description: 'GIT, ZSH, DOCKER, KUBERNETES, CIRCLE CI, TRAVIS CI, MICROSOFT DEVOPS'
+                    },
+                    {
+                        title: 'Cloud Computing',
+                        description: 'AWS, GCP'
+                    },
+                    {
+                        title: 'Agile Development',
+                        description: 'SCRUM, KANBAN'
+                    }
+                ]
+            },
+           
+            
+            {
                 title: 'Languages',
+                
                 items: [
                     {
                         prefix: 'French',
@@ -182,13 +190,13 @@ window.__sduarte__ = window.__sduarte__ || (function() {
                     }, 
                     {
                         prefix: 'English',
-                        title: 'Fluent',
-                        description: 'Able to quickly express ideas, develop views, write reports or contribute to a discussion.'
-                    }, 
+                        title: 'Pre-intermediate',
+                        description: 'Able to understand sentences and frequently used expressions related to areas of most immediate relevance, and communicate in simple and routine tasks requiring a simple and direct exchange of information.'
+                    },
                     {
                         prefix: 'Portuguese',
-                        title: 'Fluent',
-                        description: 'Able to quickly express ideas, develop views, write reports or contribute to a discussion...'
+                        title: 'Native',
+                        description: 'Can understand with ease virtually everything heard or read. Can summarise information from different spoken and written sources, reconstructing arguments and accounts in a coherent presentation...'
                     }
                 ]
             },

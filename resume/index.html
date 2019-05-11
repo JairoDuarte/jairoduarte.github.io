@@ -70,7 +70,7 @@
         </div>
       </header>
       <article class="row">
-        <div class="sections-left col-sm-4">
+        <div class="sections-left col-sm-5">
           <component
             v-for="(section, index) in sections"
             v-if="!section.right"
@@ -79,7 +79,7 @@
             v-bind:is="section.template || 'resume-section'"
           ></component>
         </div>
-        <div class="sections-right col-sm-8">
+        <div class="sections-right col-sm-7">
           <component
             v-for="(section, index) in sections"
             v-if="section.right"
@@ -97,7 +97,13 @@
         <p class="section-description" v-if="section.description">{{ section.description }}</p>
         <ul class="section-items" v-else>
           <li class="section-item" v-for="item in section.items">
-            <h4><span class="item-prefix" v-if="item.prefix">{{ item.prefix }}</span> {{ item.title }}</h4>
+            <h4><span class="item-prefix" v-if="item.prefix">{{ item.prefix }} </span>
+              <template v-if="item.link">
+                <a :href="item.link">{{ item.title }}</a>
+              </template>
+              <template v-else>
+                {{ item.title }}
+              </template></h4>
             <p class="item-description" v-if="item.description">{{ item.description }}</p>
             <ul class="item-subitems" v-if="item.items">
               <li v-for="subItem in item.items">{{ subItem }}</li>
